@@ -2,6 +2,7 @@
     "java.project.sourcePaths": ["src"],
     "java.project.outputPath": "bin",
     "java.project.referencedLibraries": [
-        "lib/**/*.jar"
+        "lib/**/*.jar",
+        "c:\\Users\\durae\\Documents\\ONE - ALLURA\\JAVA\\5 - CONSUMINDO APIS\\screenmatch\\lib\\gson-2.13.1.jar"
     ]
 }

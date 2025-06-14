@@ -6,11 +6,11 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 
 
-public class Moeda {
+public class ConversorMoeda {
 
-    public Moeda(String moeda) throws IOException, InterruptedException{
+    public ConversorMoeda(String moedaBase, String moedaAlvo, String amount ) throws IOException, InterruptedException{
 
-        URI endereco = URI.create("https://v6.exchangerate-api.com/v6/423075ff7ee8c30a8084e000/latest/" + moeda);
+        URI endereco = URI.create("https://v6.exchangerate-api.com/v6/423075ff7ee8c30a8084e000/pair/" + moedaBase + "/" + moedaAlvo + "/" + amount);
 
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()
