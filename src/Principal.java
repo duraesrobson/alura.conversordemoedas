@@ -9,11 +9,11 @@ public class Principal {
     public static void main(String[] args) throws Exception {
         Scanner scanner = new Scanner(System.in);
         
-        System.out.print("Digite oa opção: ");
+        System.out.print("Digite a opção: ");
         var escolha = scanner.nextLine();
-        String moedaBase;
-        String moedaAlvo;
-        String valor;
+        String moedaBase = "";
+        String moedaAlvo = "";
+        String valor = "";
 
         if (escolha.equalsIgnoreCase("1")) {
             moedaBase = "USD";
@@ -23,12 +23,10 @@ public class Principal {
         System.out.print("Digite o valor que deseja converter: ");
         valor = scanner.nextLine();
 
-        ConversorMoeda usd = new ConversorMoeda("USD","BRL", valor);
-        // System.out.println(usd);
+        ConversorMoeda conversor = new ConversorMoeda();
+        Moeda resultado = conversor.ConversorMoeda(moedaBase, moedaAlvo, valor);
 
-        // Gson gson = new GsonBuilder().setPrettyPrinting().create();
-
-        // System.out.println(gson.fromJson(usd, ConversorMoeda.class));
-
+        System.out.println(resultado);
+    
     }
 }
