@@ -21,8 +21,5 @@ Projeto desenvolvido durante o curso de Java da Alura, parte do programa Oracle 
 Este projeto utiliza a API Exchange Rate para obter as taxas de câmbio em tempo real. 
 A chave da API está incluída no código apenas para fins de demonstração.
 
-## Status do Projeto
-Projeto desenvolvido como parte do Challenge Oracle ONE - Alura.
-
 ## Autor
 Robson Durães
