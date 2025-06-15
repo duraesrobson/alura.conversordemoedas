@@ -2,13 +2,17 @@ import java.util.Scanner;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import java.io.FileWriter;
 import java.lang.invoke.VarHandle;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Principal {
 
     public static void main(String[] args) throws Exception {
         Scanner scanner = new Scanner(System.in);
         var escolha = "";
+        
         Asterisco();
         System.out.println("       Seja bem vindo(a) ao Conversor de Moedas!");
         Asterisco();
@@ -73,6 +77,7 @@ public class Principal {
 
             ConversorMoeda conversor = new ConversorMoeda();
             Moeda resultado = conversor.ConversorMoeda(moedaBase, moedaAlvo, valor);
+            
             Asterisco();
             System.out.print("O valor de " + valor + "(" + moedaBase + ")" + " corresponde ao valor final de " + resultado + "(" + moedaAlvo + ")" + "\n");
             Asterisco();
