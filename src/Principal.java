@@ -9,10 +9,14 @@ public class Principal {
     public static void main(String[] args) throws Exception {
         Scanner scanner = new Scanner(System.in);
         var escolha = "";
+        Asterisco();
+        System.out.println("       Seja bem vindo(a) ao Conversor de Moedas!");
+        Asterisco();
 
         while (!escolha.equals("7")) {
         
             System.out.println("""
+
                             Digite a opção de conversão:
 
                             1) Real Brasileiro =>> Euro\r 
@@ -24,9 +28,6 @@ public class Principal {
                             7) Sair
                             """);
 
-            // if (escolha.equals("7")) {
-            //     break;
-            // }
                             
             escolha = scanner.nextLine();
             System.out.println();
@@ -72,12 +73,17 @@ public class Principal {
 
             ConversorMoeda conversor = new ConversorMoeda();
             Moeda resultado = conversor.ConversorMoeda(moedaBase, moedaAlvo, valor);
-
-            System.out.println("O valor de " + valor + "(" + moedaBase + ")" + " corresponde ao valor final de " + resultado + "(" + moedaAlvo + ")" + "\n");
-
+            Asterisco();
+            System.out.print("O valor de " + valor + "(" + moedaBase + ")" + " corresponde ao valor final de " + resultado + "(" + moedaAlvo + ")" + "\n");
+            Asterisco();
         }
 
-        System.out.println("Programa finalizado!");
-    
+        Asterisco();
+        System.out.println("                Programa finalizado!");
+        Asterisco();
+    }
+
+    public static void Asterisco(){
+        System.out.print("***********************************************************\n");
     }
 }
